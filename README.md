@@ -1,5 +1,6 @@
 # AngularIntroduction
 
+
 ## Βήμα 1: Απλή δέσμευση χαρακτηριστικών (one way binding)
  
 - Χρήση του placeholder `{{ <atribute_name > }}` για τη δεσμευση του χαρακτηριστικού `attribute_name` στο template του component.
