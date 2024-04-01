@@ -11,4 +11,11 @@ import { PersonTableComponent } from './components/person-table/person-table.com
 export class AppComponent {
  name = 'Karanasios';
 
+ person0 = {givenName: 'Karanasios',
+ surName: 'Paris',
+ age: 32,
+ email: 'paris_k91@hotmail.com',
+ address: 'Athens, Greece'
+};
+
 }
