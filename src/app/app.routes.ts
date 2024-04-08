@@ -17,5 +17,11 @@ export const routes: Routes = [
     path: 'component-output-example',
     component: ComponentOutputExampleComponent
     },
+
+    {
+        path: 'template-driven-form-example',
+        component: C
+    }
+        
     {path: "", component: WelcomeComponent}
 ];
