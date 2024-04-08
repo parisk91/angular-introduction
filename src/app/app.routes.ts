@@ -5,6 +5,8 @@ import { ComponentInputExampleComponent } from './components/component-input-exa
 import { ForDirectiveExampleComponent } from './components/for-directive-example/for-directive-example.component';
 import { SimpleDatatableExampleComponent } from './components/simple-datatable-example/simple-datatable-example.component';
 import { ComponentOutputExampleComponent } from './components/component-output-example/component-output-example.component';
+import { TemplateDrivenFormExampleComponent } from './components/template-driven-form-example/template-driven-form-example.component';
+import { ReactiveFormExampleComponent } from './components/reactive-form-example/reactive-form-example.component';
 
 export const routes: Routes = [
     {path: 'for-directive-example', component: ForDirectiveExampleComponent},
@@ -20,8 +22,11 @@ export const routes: Routes = [
 
     {
         path: 'template-driven-form-example',
-        component: C
-    }
-        
+        component: TemplateDrivenFormExampleComponent,
+    },    
+    {
+        path: 'reactive-form-example',
+        component: ReactiveFormExampleComponent,
+    },
     {path: "", component: WelcomeComponent}
 ];

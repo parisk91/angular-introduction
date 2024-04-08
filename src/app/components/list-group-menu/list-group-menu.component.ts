@@ -20,9 +20,10 @@ export class ListGroupMenuComponent {
     { 
       text: 'Component Output Example',
       routerLink: 'component-output-example',
-    }
+    },
     {
-      
+      text: 'Reactive Form Example',
+      routerLink: 'reactive-form-example',
     }
   ];
 }

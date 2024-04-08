@@ -14,12 +14,11 @@ import { ePerson } from 'src/app/shared/interfaces/person';
   styleUrl: './template-driven-form-example.component.css'
 })
 export class TemplateDrivenFormExampleComponent {
-  currentPerson = EPerson;
-  persons: Eperson[] = []
+  currentPerson: ePerson;
+  persons: ePerson[] = [];
 
   onPerson(person: ePerson) {
     this.currentPerson = person;
-  this.persons.push(person)
+    this.persons.push(person)
   }
-  
 }
