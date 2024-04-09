@@ -6,7 +6,7 @@ export interface Person {
     address: string;
 }
 
-export interface ePerson {
+export interface EPerson {
     givenName: string;
     surName: string;
     age: string;
@@ -14,7 +14,7 @@ export interface ePerson {
     education: string;
 }
 
-export const ManyPerson :ePerson[] = [{
+export const ManyPerson :EPerson[] = [{
           "givenName": "Nicholas",
           "surName": "Ramirez",
           "age": "47",

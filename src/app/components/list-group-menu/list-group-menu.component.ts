@@ -7,23 +7,28 @@ import { MenuItem } from 'src/app/shared/interfaces/menu-item';
   standalone: true,
   imports: [RouterLink, RouterLinkActive],
   templateUrl: './list-group-menu.component.html',
-  styleUrl: './list-group-menu.component.css'
+  styleUrl: './list-group-menu.component.css',
 })
 export class ListGroupMenuComponent {
   menu: MenuItem[] = [
     { text: 'Component Input Example', routerLink: 'component-input-example' },
-    { text: 'for Directive Example', routerLink: 'for-directive-example' },
+    { text: '@for Directive Example', routerLink: 'for-directive-example' },
     { text: 'Event Bind Example', routerLink: 'event-bind-example' },
-    { text: 'Simple Datatable Example',
-    routerLink: 'simple-datatable-example',
+    {
+      text: 'Simple Datatable Example',
+      routerLink: 'simple-datatable-example',
     },
-    { 
+    {
       text: 'Component Output Example',
       routerLink: 'component-output-example',
     },
     {
+      text: 'Template Driven Form Example',
+      routerLink: 'template-driven-form-example',
+    },
+    {
       text: 'Reactive Form Example',
       routerLink: 'reactive-form-example',
-    }
+    },
   ];
 }

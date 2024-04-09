@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { ManyPerson, ePerson} from 'src/app/shared/interfaces/person';
+import { EPerson } from 'src/app/shared/interfaces/person';
 import { sortBy } from 'lodash-es';
 
 @Component({
@@ -7,48 +7,47 @@ import { sortBy } from 'lodash-es';
   standalone: true,
   imports: [],
   templateUrl: './simple-datatable.component.html',
-  styleUrl: './simple-datatable.component.css'
+  styleUrl: './simple-datatable.component.css',
 })
-export class SimpleDataTableComponent {
-@Input() data: ePerson[];
-@Output() personClicked = new EventEmitter<ePerson>();
+export class SimpleDatatableComponent {
+  @Input() data: EPerson[];
+  @Output() personClicked = new EventEmitter<EPerson>();
 
-sortOrder= {
-  givenName: 'none',
-  surName: 'none',
-  age: 'none',
-  email:'none',
-  education: 'none'
-}
+  sortOrder = {
+    givenName: 'none',
+    surName: 'none',
+    age: 'none',
+    email: 'none',
+    education: 'none',
+  };
 
-sortData(sortKey: string) {
-  if (this.sortOrder[sortKey] === 'asc') {
-    this.sortOrder[sortKey] = 'desc';
-    this.data = sortBy(this.data, sortKey).reverse();
-  } else {
-    this.sortOrder[sortKey] = 'asc';
-    this.data  = sortBy(this.data, sortKey);
-  }
+  sortData(sortKey: string) {
+    if (this.sortOrder[sortKey] === 'asc') {
+      this.sortOrder[sortKey] = 'desc';
+      this.data = sortBy(this.data, sortKey).reverse();
+    } else {
+      this.sortOrder[sortKey] = 'asc';
+      this.data = sortBy(this.data, sortKey);
+    }
 
-  for (let key in this.sortOrder) {
-    if (key !== sortKey) {
-      this.sortOrder[key] = 'none'
+    for (let key in this.sortOrder) {
+      if (key !== sortKey) {
+        this.sortOrder[key] = 'none';
+      }
     }
   }
-}
 
-sortSign(sortKey: string) {
-  if (this.sortOrder[sortKey] === 'asc') {
-    return '↑';
-  } else if (this.sortOrder[sortKey] === 'desc') {
-    return '↓';
-  } else {
-    return '';
+  sortSign(sortKey: string) {
+    if (this.sortOrder[sortKey] === 'asc') {
+      return '↑';
+    } else if (this.sortOrder[sortKey] === 'desc') {
+      return '↓';
+    } else {
+      return '';
+    }
   }
-}
 
-  onPersonClicked(person: ePerson) {
+  onPersonClicked(person: EPerson) {
     this.personClicked.emit(person);
   }
-
 }

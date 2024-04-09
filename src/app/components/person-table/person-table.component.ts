@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { Person, ePerson } from 'src/app/shared/interfaces/person';
+import { Person, EPerson } from 'src/app/shared/interfaces/person';
 
 @Component({
   selector: 'app-person-table',
@@ -9,7 +9,7 @@ import { Person, ePerson } from 'src/app/shared/interfaces/person';
   styleUrl: './person-table.component.css'
 })
 export class PersonTableComponent {
-  @Input() person: Person | ePerson | undefined;
+  @Input() person: Person | EPerson | undefined;
 
   isPerson() {
     return this.person && 'address' in this.person;

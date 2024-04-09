@@ -15,8 +15,4 @@ import { ListGroupMenuComponent } from './components/list-group-menu/list-group-
 export class AppComponent {
  //name = 'Karanasios';
 
- 
-
-
-
 }
