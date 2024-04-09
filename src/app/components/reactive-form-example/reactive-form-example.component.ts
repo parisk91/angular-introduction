@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { EpersonReactiveFormComponent } from '../eperson-reactive-form-example/eperson-reactive-form.component-exampe';
+import { EpersonReactiveFormComponent } from '../eperson-reactive-form/eperson-reactive-form.component';
 import { EPerson } from 'src/app/shared/interfaces/person';
 import { PersonTableComponent } from '../person-table/person-table.component';
 import { SimpleDatatableComponent } from '../simple-datatable/simple-datatable.component';

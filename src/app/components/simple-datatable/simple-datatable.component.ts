@@ -5,7 +5,7 @@ import { sortBy } from 'lodash-es';
 @Component({
   selector: 'app-simple-datatable',
   standalone: true,
-  imports: [],
+  imports: [SimpleDatatableComponent],
   templateUrl: './simple-datatable.component.html',
   styleUrl: './simple-datatable.component.css',
 })

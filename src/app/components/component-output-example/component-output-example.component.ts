@@ -1,6 +1,6 @@
 import { Component, Inject } from '@angular/core';
 import { EPerson, ManyPerson } from 'src/app/shared/interfaces/person';
-import { SimpleDataTableComponent } from '../simple-datatable/simple-datatable.component';
+import { SimpleDatatableComponent } from '../simple-datatable/simple-datatable.component';
 import {
   Dialog,
   DialogRef,
@@ -12,7 +12,7 @@ import { PersonTableComponent } from '../person-table/person-table.component';
 @Component({
   selector: 'app-component-output-example',
   standalone: true,
-  imports: [DialogModule, SimpleDataTableComponent],
+  imports: [DialogModule, SimpleDatatableComponent],
   templateUrl: './component-output-example.component.html',
   styleUrl: './component-output-example.component.css',
 })
