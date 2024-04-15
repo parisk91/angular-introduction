@@ -1,6 +1,6 @@
 import { Component, Inject } from '@angular/core';
-import { ePerson, ManyPerson } from 'src/app/shared/interfaces/person';
-import { SimpleDataTableComponent } from '../simple-datatable/simple-datatable.component';
+import { EPerson, ManyPerson } from 'src/app/shared/interfaces/person';
+import { SimpleDatatableComponent } from '../simple-datatable/simple-datatable.component';
 import {
   Dialog,
   DialogRef,
@@ -12,7 +12,7 @@ import { PersonTableComponent } from '../person-table/person-table.component';
 @Component({
   selector: 'app-component-output-example',
   standalone: true,
-  imports: [DialogModule, SimpleDataTableComponent],
+  imports: [DialogModule, SimpleDatatableComponent],
   templateUrl: './component-output-example.component.html',
   styleUrl: './component-output-example.component.css',
 })
@@ -21,7 +21,7 @@ export class ComponentOutputExampleComponent {
 
   constructor(public dialog: Dialog) {}
 
-  onPersonClicked(person: ePerson) {
+  onPersonClicked(person: EPerson) {
     // console.log(person);
     // alert(this.personTemplate(person));
     this.dialog.open(PersonDialogComponent, {
@@ -29,7 +29,7 @@ export class ComponentOutputExampleComponent {
     });
   }
 
-  personTemplate(person: ePerson) {
+  personTemplate(person: EPerson) {
     return `
     Person Details:
 
@@ -66,6 +66,6 @@ export class ComponentOutputExampleComponent {
 class PersonDialogComponent {
   constructor(
     public dialogRef: DialogRef,
-    @Inject(DIALOG_DATA) public person: ePerson,
+    @Inject(DIALOG_DATA) public person: EPerson,
   ) {}
 }

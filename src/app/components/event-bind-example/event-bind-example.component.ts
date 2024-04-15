@@ -5,15 +5,15 @@ import { Component } from '@angular/core';
   standalone: true,
   imports: [],
   templateUrl: './event-bind-example.component.html',
-  styleUrl: './event-bind-example.component.css'
+  styleUrl: './event-bind-example.component.css',
 })
 export class EventBindExampleComponent {
-  times: number= 0;
+  times: number = 0;
 
-  userInput: string ="";
+  userInput: string = '';
 
   incrementTimes() {
-    this.times++
+    this.times++;
   }
 
   decrementTimes() {
