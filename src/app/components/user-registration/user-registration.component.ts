@@ -5,6 +5,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
+import { User } from 'src/app/shared/interfaces/user';
 import { UserService } from 'src/app/shared/services/user.service';
 
 @Component({
@@ -38,5 +39,19 @@ export class UserRegistrationComponent {
 
   onSubmit(value: any) {
     console.log(value);
+  
+
+  const user = this.form.value as User
+  delete user['confirmPassword']
+
+  this.userService.registerUser(user).subscribe({
+    next: (response) => {
+      console.log('User registered', response.msg)
+    },
+    error: (response) => {
+      const message = response.error.message
+      console.log('Error registering user', message)
+    },
+  })
   }
 }
