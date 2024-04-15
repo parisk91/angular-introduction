@@ -37,6 +37,6 @@ export class ListGroupMenuComponent {
     {
       text: 'User Registration Example',
       routerLink: 'user-registration-example',
-    }
+    },
   ];
 }
