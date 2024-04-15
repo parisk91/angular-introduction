@@ -43,6 +43,9 @@ export const routes: Routes = [
   { path: 'user-registration-example',
     component: UserRegistrationComponent
   },
+<<<<<<< HEAD
 
+=======
+>>>>>>> 14-user-registration
   { path: '', component: WelcomeComponent },
 ];
