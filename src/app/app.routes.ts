@@ -36,7 +36,6 @@ export const routes: Routes = [
     path: 'reactive-form-example',
     component: ReactiveFormExampleComponent,
   },
-<<<<<<< HEAD
   {
     path: 'http-client-example',
     component: HttpClientExampleComponent,
@@ -45,7 +44,5 @@ export const routes: Routes = [
     component: UserRegistrationComponent
   },
 
-=======
->>>>>>> main
   { path: '', component: WelcomeComponent },
 ];

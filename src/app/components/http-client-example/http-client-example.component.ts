@@ -1,6 +1,6 @@
 import { Component, OnInit, inject } from '@angular/core';
-import { ChuckNorrisJoke, DadJoke } from 'src/app/shared/interfaces/jokes';
-import { JokesService } from 'src/app/shared/services/jokes.service';
+import { chuckNorrisIsJoke, DadJoke } from 'src/app/shared/interfaces/jokes';
+import { JokesService } from 'src/app/shared/services/jokes.services';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 
@@ -41,7 +41,7 @@ export class HttpClientExampleComponent implements OnInit {
   refreshChuckNorrisJoke() {
     this.jokesService
       .getChuckNorrisJoke()
-      .subscribe((data: ChuckNorrisJoke) => {
+      .subscribe((data: chuckNorrisIsJoke) => {
         console.log(data);
         this.chuckNorrisJoke = data.value;
       });
