@@ -10,6 +10,9 @@ import { ReactiveFormExampleComponent } from './components/reactive-form-example
 import { HttpClientExampleComponent } from './components/http-client-example/http-client-example.component';
 import { UserRegistrationComponent } from './components/user-registration/user-registration.component';
 import { RestrictedContentExampleComponent } from './components/restricted-content-example/restricted-content-example.component';
+import { UserLoginComponent } from './components/user-login/user-login.component';
+import { authGuard } from './shared/guards/auth.guard';
+import { FunForNerdsComponent } from './components/fun-for-nerds/fun-for-nerds/fun-for-nerds.component';
 
 export const routes: Routes = [
   {
@@ -47,6 +50,12 @@ export const routes: Routes = [
   {
     path: 'restricted-content-example',
     component: RestrictedContentExampleComponent
+  },
+  {
+    path: 'login', component: UserLoginComponent, canActivate: [authGuard]
+  },
+  {
+    path: 'fun-for-nerds', component: FunForNerdsComponent
   },
   { path: '', component: WelcomeComponent },
 ];
